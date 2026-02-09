@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>San Valentín</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Valentín 💖</title>
+
   <style>
     body {
       margin: 0;
@@ -15,9 +16,6 @@
       font-family: 'Comic Sans MS', Arial, sans-serif;
       background: #ffe6f0;
     }
-
-    /* FONDO CON IMAGEN (OPCIONAL) */
-    
 
     .card {
       background: white;
@@ -55,8 +53,14 @@
       cursor: pointer;
     }
 
-    #yesBtn { background: #ff69b4; color: white; }
-    #noBtn { background: #ccc; }
+    #yesBtn {
+      background: #ff69b4;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ccc;
+    }
 
     .gallery {
       display: grid;
@@ -74,20 +78,21 @@
     }
 
     @keyframes beat {
-      0%,100% { transform: scale(1); }
+      0%, 100% { transform: scale(1); }
       50% { transform: scale(1.2); }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- FONDO -->
-  
-
-  <!-- TARJETA -->
   <div class="card" id="card">
     <div class="heart">💖🐱</div>
-    <h1>¿Quieres ser mi San Valentín,<br>Alexandra Puruguay Salinas?</h1>
+
+    <h1>
+      ¿Quieres ser mi San Valentín,<br>
+      Alexandra Puruguay Salinas?
+    </h1>
 
     <div class="buttons">
       <button id="yesBtn" onclick="sayYes()">Sí 💕</button>
@@ -95,11 +100,11 @@
     </div>
 
     <div class="gallery">
-      <img src="fAlexandra.jpeg" />
-      <img src="Alexandra1.jpeg" />
-      <img src="Alexandra3.jpeg" />
-      <img src="Alexandra4.jpeg" />
-      <img src="Alexandra5.jpeg" />
+      <img src="Alexandra.jpeg">
+      <img src="Alexandra1.jpeg">
+      <img src="Alexandra3.jpeg">
+      <img src="Alexandra4.jpeg">
+      <img src="Alexandra5.jpeg">
     </div>
   </div>
 
@@ -107,7 +112,7 @@
     let noCount = 0;
 
     function sayYes() {
-      document.getElementById('card').innerHTML = `
+      document.getElementById("card").innerHTML = `
         <div class="heart">💘🐱</div>
         <h1>¡Sabía que dirías que SÍ! 😍</h1>
         <p>Gracias por hacerme la persona más feliz 💖</p>
@@ -116,17 +121,26 @@
 
     function sayNo() {
       noCount++;
-      const noBtn = document.getElementById('noBtn');
-      const msgs = ['¿Segura? 🥺','Piénsalo otra vez 💗','Vamos, di que sí 😚','El no no vale 😝','Solo existe el SÍ 💘'];
+      const noBtn = document.getElementById("noBtn");
+      const msgs = [
+        "¿Segura? 🥺",
+        "Piénsalo otra vez 💗",
+        "Vamos, di que sí 😚",
+        "El no no vale 😝",
+        "Solo existe el SÍ 💘"
+      ];
       noBtn.textContent = msgs[noCount % msgs.length];
-      noBtn.style.position = 'relative';
-      noBtn.style.left = Math.random()*80 - 40 + 'px';
-      noBtn.style.top = Math.random()*80 - 40 + 'px';
+      noBtn.style.position = "relative";
+      noBtn.style.left = Math.random() * 80 - 40 + "px";
+      noBtn.style.top = Math.random() * 80 - 40 + "px";
     }
   </script>
+
 </body>
+</html>
 
 </html>
+
 
 
 
