@@ -62,12 +62,6 @@
       background: #ccc;
     }
 
-    .musicBtn {
-      margin-top: 10px;
-      background: #ffb6c1;
-      color: white;
-    }
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -92,11 +86,6 @@
 
 <body>
 
-  <!-- 🎶 MÚSICA DE FONDO -->
-  <audio id="music" loop>
-    <source src="lamasbella.mp3" type="audio/mpeg">
-  </audio>
-
   <div class="card" id="card">
     <div class="heart">💖🐱</div>
 
@@ -110,9 +99,6 @@
       <button id="noBtn" onclick="sayNo()">No 😢</button>
     </div>
 
-    <!-- BOTÓN PARA ACTIVAR MÚSICA -->
-    <button class="musicBtn" onclick="playMusic()">🎵 Activar música</button>
-
     <div class="gallery">
       <img src="Alexandra1.jpeg">
       <img src="Alexandra3.jpeg">
@@ -124,16 +110,11 @@
   <script>
     let noCount = 0;
 
-    function playMusic() {
-      document.getElementById("music").play();
-    }
-
     function sayYes() {
-      document.getElementById("music").play();
       document.getElementById("card").innerHTML = `
         <div class="heart">💘🐱</div>
         <h1>¡Sabía que dirías que SÍ! 😍</h1>
-        <p>Ahora esta canción es solo para nosotros 💖</p>
+        <p>Gracias por hacerme la persona más feliz 💖</p>
       `;
     }
 
@@ -156,6 +137,9 @@
 
 </body>
 </html>
+
+</html>
+
 
 
 
